@@ -1,26 +1,35 @@
 
-.Teacher-review{
-    padding : 50px 0px 30px;
+.our-cards-section , .our-demo-cards-section{
+    padding : 10px 5px;
+    width : 36rem;
+    background: #f8f8f8;
+    margin-left : 46px;
+
 
     .teachers-data-div {
-         img { 
-            width : 200px;
-            height : 250px;
-            object-fit : cover; 
-         }
+        .col-5 {
+             width : 100%;   
 
-         .timings{
-             .grade-section{
-                 font-size: 24px;
-                 font-weight : 500;
-                 margin : 0px;
+             img { 
+                width : 100%;
+                height : 250px;
+                object-fit : cover; 
              }
+        } 
 
-             .time-section{
-                 font-size : 20px;
-                 font-weight : 700;
-             }
-         }
+        .timings{
+            .grade-section{
+                font-size: 24px;
+                font-weight : 500;
+                margin : 0px;
+            }
+
+            .time-section{
+                font-size : 20px;
+                font-weight : 700;
+            }
+        }
+         
 
          .teacher-personal-details{
              .name {
@@ -49,6 +58,8 @@
     .stars{
         text-align : center;
         margin-top : 20px;
+        margin-bottom : 20px;
+
         i{
             margin : 0 10px;
             font-size : 30px;
@@ -56,8 +67,10 @@
     }
 }
 
-.demo-video-section{
+
+.our-demo-cards-section{
     padding : 0px 0px 30px;
+    width : 38rem;
 
     .demo-video-text{
         text-align: center;
@@ -66,3 +79,13 @@
         margin-bottom : 20px;
     }
 }
+
+
+@media (max-width: 991.98px) { 
+   
+    .our-cards-section{
+        width : 29rem;
+        margin-left : 10px;
+    }
+}
+

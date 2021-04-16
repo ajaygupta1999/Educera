@@ -13,7 +13,7 @@ class Myapp extends Component {
     constructor(props){
         super(props);
         this.state = {
-            isTeacherView : false,
+            isTeacherView : true,
             isDemoVideo : false,
             isUserDetails : false,
             isLoginActive : false,
@@ -26,7 +26,7 @@ class Myapp extends Component {
                 accesstoken : "",
                 imgurl : "",
             },
-            selectedStd  : "",
+            selectedStd  : "11Th",
             userDetails : {
                 firstname : "",
                 lastname : "",
@@ -101,20 +101,13 @@ class Myapp extends Component {
         });
     }
 
-    handleShowTeacher = (e) => {
+    handleShowTeacher = (data) => {
         this.setState({
             ...this.state,
-            selectedStd : e.target.value,
+            selectedStd : data.value,
             isTeacherView : true,
+            isDemoVideo : false
         });
-    }
-
-    closeTeacherView = () => {
-        this.setState({
-            ...this.state,
-            selectedStd : "",
-            isTeacherView : false,
-        })
     }
 
     handleDemoClick = () => {
@@ -122,13 +115,6 @@ class Myapp extends Component {
             ...this.state,
             isTeacherView  :false,
             isDemoVideo : true
-        });
-    }
-
-    closeDemoVideo = () => {
-        this.setState({
-            ...this.state,
-            isDemoVideo : false
         });
     }
 
@@ -163,45 +149,108 @@ class Myapp extends Component {
     render(){
         return(
             <div className="main-page-section">
-                <Navbar toggleLogin={this.toggleLogin} userDetails={this.state.userDetails} googleLogin={this.state.googleLogin} />
-                <div className="my-main-page-content">
-                    <Mainpage />
-                    {
-                        this.state.isLoginActive && 
-                        <Login handleGoogleLogin={this.handleGoogleLogin} toggleLogin={this.toggleLogin} handleLoginNext={this.handleLoginNext} AddMobNo={this.AddMobileNo}/>
-                    }
-                    {
-                        this.state.isOTPActive && 
+                <div>
+                    <Navbar toggleLogin={this.toggleLogin} userDetails={this.state.userDetails} googleLogin={this.state.googleLogin} />
+                    <div className="my-main-page-content">
+                        <Mainpage />
+                        {
+                            this.state.isLoginActive && 
+                            <Login handleGoogleLogin={this.handleGoogleLogin} toggleLogin={this.toggleLogin} handleLoginNext={this.handleLoginNext} AddMobNo={this.AddMobileNo}/>
+                        }
+                        {
+                            this.state.isOTPActive && 
                             <OTPVerificationPage handleCloseOTPVerification={this.handleCloseOTPVerification} handleLoginNext={this.handleLoginNext} 
-                            Mobno={this.state.Mobno} OTP={this.state.OTP} OTPVerified={this.OTPVerified} resetOTP={this.resetOTP}/>
-                    }
-                    {
-                        this.state.isUserDetails && 
-                        <UserDetails handleRegister={this.handleRegister} handleCloseUserDetails={this.handleCloseUserDetails} handleLoginNext={this.handleLoginNext} />
-                    }
-                    <div className="select-class-section">
-                        <h1>Select Grade: </h1> 
-                        <button className="class-std btn btn-md btn-warning" onClick={this.handleShowTeacher} value="13Th"> 13Th </button>
-                        <button className="class-std btn btn-md btn-warning" onClick={this.handleShowTeacher} value="12Th"> 12Th </button>
-                        <button className="class-std btn btn-md btn-warning" onClick={this.handleShowTeacher} value="11Th"> 11Th </button>
-                        <button className="class-std btn btn-md btn-warning" onClick={this.handleShowTeacher} value="10Th"> 10Th </button>
-                        <button className="class-std btn btn-md btn-warning" onClick={this.handleShowTeacher} value="9Th"> 9Th </button>
-                        <button className="class-std btn btn-md btn-warning" onClick={this.handleShowTeacher} value="8Th"> 8Th </button>
-                        <button className="class-std btn btn-md btn-warning" onClick={this.handleShowTeacher} value="7Th"> 7Th </button>
-                        <button className="class-std btn btn-md btn-warning" onClick={this.handleShowTeacher} value="6Th"> 6Th </button>
-                        <button className="class-std btn btn-md btn-warning" onClick={this.handleShowTeacher} value="1-5Th"> 1-5Th </button>
-                        <button className="class-std btn btn-md btn-warning" onClick={this.handleShowTeacher} value="LKG-UKG"> LKG-UKG </button>
+                                Mobno={this.state.Mobno} OTP={this.state.OTP} OTPVerified={this.OTPVerified} resetOTP={this.resetOTP}/>
+                        }
+                        {
+                            this.state.isUserDetails && 
+                            <UserDetails handleRegister={this.handleRegister} handleCloseUserDetails={this.handleCloseUserDetails} handleLoginNext={this.handleLoginNext} />
+                        }
+                    </div>   
+                </div>
+                <div className="start-learning-section">
+                    <h1>START YOUR LEARNING WITH VIDYAYAN</h1>
+                    <div className="our-bottom-some-links">
+                        <button className="our-live-buttons btn btn-sm btn-md">
+                            LEARN LIVE
+                        </button>
+                    
+                        <button className="our-live-buttons btn btn-sm btn-md">
+                            DEMO CLASSES
+                        </button>
+                    
+                        <button className="our-live-buttons btn btn-sm btn-md">
+                            JOIN COURSES
+                        </button>
                     </div>
+                </div>
+                <div className="teacher-lecture-section">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" id="home-tab" data-toggle="tab" href="#" role="tab" aria-controls="" aria-selected="false" onClick={() => {
+                                this.handleShowTeacher({value : "13Th"})
+                                }}> 13Th </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" onClick={() => {
+                                this.handleShowTeacher({value : "12Th"})
+                                }}> 12Th </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true"  onClick={() => {
+                                this.handleShowTeacher({value : "11TH"})
+                                }}> 11Th </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"  onClick={() => {
+                                this.handleShowTeacher({value : "10TH"})
+                                }}> 10Th </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"  onClick={() => {
+                                this.handleShowTeacher({value : "9TH"})
+                                }}> 9Th </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"  onClick={() => {
+                                this.handleShowTeacher({value : "8TH"})
+                                }}> 8Th </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"  onClick={() => {
+                                this.handleShowTeacher({value : "7TH"})
+                                }}> 7Th </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"  onClick={() => {
+                                this.handleShowTeacher({value : "6TH"})
+                                }}> 6Th </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"  onClick={() => {
+                                this.handleShowTeacher({value : "1-5Th"})
+                                }}> 1-5Th </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"  onClick={() => {
+                                this.handleShowTeacher({value : "LKG-UKG"})
+                                }} > LKG-UKG </a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="tab-content education-standard-section" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     {
                         this.state.isTeacherView &&
-                        <TeacherView closeTeacherView={this.closeTeacherView} handleDemoClick={this.handleDemoClick} selectedStd={this.state.selectedStd}/>
+                        <TeacherView handleDemoClick={this.handleDemoClick} selectedStd={this.state.selectedStd}/>
                     }
                     {
                         this.state.isDemoVideo && 
-                        <DemoVideo  closeDemoVideo={this.closeDemoVideo} />
+                        <DemoVideo />
                     }
                 </div>
             </div>
+        </div>
         );
     }
 }

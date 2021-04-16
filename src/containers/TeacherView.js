@@ -5,22 +5,14 @@ import UserImage from "../Images/UserImage.jpg";
 
 class TeacherView extends Component {
 
-    closeTeacherView = () => {
-        this.props.closeTeacherView();
-    }
-
     handleDemoClick = () => {
         this.props.handleDemoClick();
     }
 
     render(){
         return(        
-         <div className="modal-primary-container">
-            <div className="modal-primary search-modal">
-                <button className="modal-close-button" aria-label="close button" onClick={this.closeTeacherView}> 
-                   <i className="fas fa-times"></i>
-                </button>
-
+          <div className="card our-cards-section">
+            <div className="card-body">
                 <div className="Teacher-review">
                     <div className="row teachers-data-div">
                         <div className="col-5">

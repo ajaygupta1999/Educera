@@ -96,23 +96,6 @@ class Mainpage extends Component{
                             
                         </div>
                     </div>
-                    
-                </div>
-                <div className="start-learning-section">
-                    <h1>START YOUR LEARNING WITH VIDYAYAN</h1>
-                    <div className="our-bottom-some-links">
-                        <button className="our-live-buttons btn btn-sm btn-md">
-                            LEARN LIVE
-                        </button>
-                    
-                        <button className="our-live-buttons btn btn-sm btn-md">
-                            DEMO CLASSES
-                        </button>
-                    
-                        <button className="our-live-buttons btn btn-sm btn-md">
-                            JOIN COURSES
-                        </button>
-                    </div>
                 </div>
              </div>
         );

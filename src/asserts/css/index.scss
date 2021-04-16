@@ -3,10 +3,6 @@ body{
     margin : 0;
     padding : 0;
 
-    .main-page-section {
-        margin-bottom : 30px;
-    }
-
     .my-main-page-content{
         padding : 0px 120px;
     }
@@ -74,6 +70,32 @@ body{
         }
     }
 
+    .start-learning-section{
+        background : white;
+        padding-top: 36px;
+        padding-bottom : 20px;
+
+        h1{
+            text-align: center;
+            color: black;
+        }
+
+        .our-bottom-some-links{
+            text-align : center;
+            margin : 10px 0px;
+            margin-top : 24px;
+
+            .our-live-buttons{
+                margin : 0px 60px;
+                padding: 10px 22px;
+                font-weight: 500;
+                color: white;
+                border-radius: 4px;
+                background: #F19D26;
+            }
+        }
+     }
+
     .select-class-section{
         h1{
             margin-left : 5px;
@@ -88,11 +110,45 @@ body{
             background : yellow;
         }
     }
+
+    #myTab {
+        background: white;
+
+        .nav-item {
+            a{
+                background-color: #f5f5f5d1;
+                font-weight : 500;
+                color : black;
+                margin-right : 10px;
+                padding : 10px 26px;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+
+            .active{
+                font-weight : 600;
+                color : black;
+                background : white;
+                color: #ff6200;
+                box-shadow: rgba(0, 0, 0, 0.16) -1px -4px 6px, rgba(0, 0, 0, 0.23) 1px -3px 6px;
+            }
+        }
+    } 
+
+    .teacher-lecture-section{
+        background: white;
+        padding : 0px 120px;
+    }
+
+    .education-standard-section{
+        padding: 25px 75px 30px;
+        background: white;
+        box-shadow: rgba(0, 0, 0,  0.16) 0px 11px 6px, rgba(0, 0, 0, 0.23) 3px 2px 6px;
+    }
 }
 
 
 @media (max-width: 991.98px) { 
-
     .my-main-page-content{
         padding : 0px 36px !important;
     }
@@ -100,4 +156,26 @@ body{
     .My-navbar{
         padding : 10px 36px !important;
     }
+
+    .teacher-lecture-section{
+      padding : 0px 30px !important;
+    }
+
+    .education-standard-section{
+        padding : 0;
+    }
+    .our-demo-cards-section{
+        width: 29rem !important;
+        margin-left: 10px !important;
+    }
+
+    .education-standard-section{
+        padding : 0px !important;
+        padding-bottom : 30px !important;
+    }
+
+    iframe { 
+        width : 423px;
+    }
+    
  }
