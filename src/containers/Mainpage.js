@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import "../asserts/css/Mainpage.scss";
-import UserImage from "../Images/UserImage.jpg";
 import playstore from "../Images/Playstore.png";
 import applestore from "../Images/Applestore.png";
 import Learntocode from "../Images/Learntocode.png";
-
+import Mobileapp from "../Images/Mobile-app.png";
+import YellowRectangle from "../Images/Yellow-rectangle.png";
 
 class Mainpage extends Component{
    
@@ -28,7 +28,7 @@ class Mainpage extends Component{
                           </div>
                      </div>
                      <div className="col-md-4">
-                        <img style={{ height : "400px" }} src="/images/Mobile-app.png"></img>
+                        <img style={{ height : "400px" }} src={Mobileapp}></img>
                      </div>
                  </div>
                 <div className="phone-no-section d-flex justify-content-between">
@@ -53,7 +53,7 @@ class Mainpage extends Component{
                                 <img className="playstore-image" src={playstore} />
                             </div>
                             <div className="Applestore-image d-flex align-items-center">
-                                <img className="applestore-image" src="/Images/Applestore.png" />
+                                <img className="applestore-image" src={applestore} />
                             </div>
                         </div>
                     </div>
@@ -86,10 +86,10 @@ class Mainpage extends Component{
                         </div>
                         <div className="col-md-6">
                             <div className="images-sections-of-app">
-                                <img src="/Images/Yellow-rectangle.png" />
+                                <img src={YellowRectangle} />
                                 <div className="lower-sections">
                                     <p className="text-of-coding-section">Coding Classes for age <br /> 6 - 12</p>
-                                    <img className="some-text-image" src="/Images/Learntocode.png" />
+                                    <img className="some-text-image" src={Learntocode}  />
                                 </div>
                                 
                             </div>

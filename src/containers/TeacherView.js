@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "../asserts/css/Model.scss";
 import "../asserts/css/DemoVideo.scss";
+import UserImage from "../Images/UserImage.jpg";
 
 class TeacherView extends Component {
 
@@ -23,7 +24,7 @@ class TeacherView extends Component {
                 <div className="Teacher-review">
                     <div className="row teachers-data-div">
                         <div className="col-5">
-                            <img src="/Images/UserImage.jpg"></img>
+                            <img src={UserImage}></img>
                         </div>
                         <div className="col-7">
                             <div className="timings">
