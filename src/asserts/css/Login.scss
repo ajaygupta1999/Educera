@@ -1,0 +1,32 @@
+
+
+.Login-page{
+    margin-top : 20px;
+    text-align: center;
+
+    .mobile-number-text{
+        font-size : 32px;
+        text-align: center;
+    }
+
+    .search-tutor-section{
+        margin : 26px 0px;
+        form{
+            width : 100%;
+
+            .telephone-code{
+                margin-right : 8px;
+            }
+
+            .input-phone-number-section{
+                width  : 50%;
+
+                input{
+                    background : #b9b9b9a6;
+                }
+            }
+        }
+    }
+
+
+}

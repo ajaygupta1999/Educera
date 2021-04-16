@@ -1,0 +1,29 @@
+.OTPVerification-page{
+    .otp-text-h1{
+        font-size : 26px;
+        text-align: center;
+    }
+
+    .otp-form{
+        margin: 26px auto;
+        text-align: center;
+
+        .otp-inputs{
+            input{
+                border: none;
+                border-bottom : 1px solid black;
+                margin-right : 20px;
+            }
+        }
+
+        .Verify-page-section{
+            margin : 0px 15%;
+        }
+
+        .reset-button{
+            margin : 20px 0px;
+            font-size : 18px;
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+
+.Teacher-review{
+    padding : 50px 0px 30px;
+
+    .teachers-data-div {
+         img { 
+            width : 200px;
+            height : 250px;
+            object-fit : cover; 
+         }
+
+         .timings{
+             .grade-section{
+                 font-size: 24px;
+                 font-weight : 500;
+                 margin : 0px;
+             }
+
+             .time-section{
+                 font-size : 20px;
+                 font-weight : 700;
+             }
+         }
+
+         .teacher-personal-details{
+             .name {
+                 font-size : 20px;
+                 font-weight : 600;
+                 color : blue;
+                 margin-bottom  : 4px;
+             }
+
+             .profession{
+                font-size : 14px;
+                font-weight : 500;
+                color : black;
+                margin-bottom  : 4px;
+             }
+
+             .expert{
+                font-size : 14px;
+                font-weight : 500;
+                color : black;
+                margin-bottom  : 4px;
+             }
+         }
+    }
+
+    .stars{
+        text-align : center;
+        margin-top : 20px;
+        i{
+            margin : 0 10px;
+            font-size : 30px;
+        }
+    }
+}
+
+.demo-video-section{
+    padding : 0px 0px 30px;
+
+    .demo-video-text{
+        text-align: center;
+        font-size : 36px;
+        font-weight : 500;
+        margin-bottom : 20px;
+    }
+}

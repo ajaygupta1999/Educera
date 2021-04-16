@@ -1,0 +1,215 @@
+
+.main-page{
+     .first-section {
+        margin-bottom  : 60px;
+
+        .col-md-8 {
+             .Intro-section{
+                background-color: #ffffff;
+                height: 50%;
+                width: 65%;
+                padding: 58px;
+                border-radius: 50%;
+
+                h3{
+                    text-align: center;
+                    margin-bottom : 10px;
+                    color : blue;
+                }
+
+                p{
+                    text-align: center;
+                }
+             }
+
+             .some-text-about-courses{
+                 margin-top : 30px;
+                
+                 h1{
+                     font-size : 38px;
+                     font-style: italic;
+                     color : white;
+                 }
+
+                 h3{
+                    text-align: center;
+                    font-style: italic;
+                    color: white;
+                 }
+             }
+         }
+     }
+
+     .phone-no-section{
+         width : 60%;
+         margin-bottom  : 30px;
+
+         .find-me-a-tutor-section {
+             button {
+                padding: 7px 20px;
+                font-weight: 500;
+                color: black;
+                background: #FAFF0D;
+                border: 1px solid #FAFF0D;
+             }
+         }
+        .search-tutor-section{
+            width : 400px;
+
+            input{
+                border-radius : 0px;
+            }
+
+            .input-group-text{
+                border-radius : 0px;
+                color: black;
+                border-radius: 0px;
+                background: yellow;
+                font-weight: 500;
+            }
+        }
+     }
+
+     .download-section {
+
+         .playstore-image {
+             width : 170px;
+             margin-right : 25px;
+         }
+
+         .applestore-image{
+            width : 200px;
+            margin-right : 25px;
+         }
+
+         .find-your-tutor-text , .get-link-to-download-text{
+             font-size : 18px;
+             font-weight : 500;
+         }
+         .get-link-section{
+             width : 80%;
+
+             .input-group-append{
+                 span {
+                    background: yellow;
+                    border: none;
+                    font-weight: 500;
+                    font-size: 16px;
+                 }
+            }
+
+             .get-link-button-sections  {
+                button {
+                    margin-right: 10px;
+                    background: white;
+                    border: none;
+                    color: black;
+                }
+             }
+         }
+     }
+
+
+     .learn-to-code-section{
+         margin-top : 100px;
+         padding: 10px 50px;
+
+         .keep-learning-text{
+            margin-top : 20px;
+         } 
+
+         .images-sections-of-app {
+             position : relative;
+         }
+        
+         .col-md-6{
+             position : relative;
+             text-align: center;
+
+             img { 
+                 width : 300px;
+             }
+         }
+
+         .images-sections-of-app{
+             position :relative;
+
+             .lower-sections{
+                top: 0;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+             }
+
+             .text-of-coding-section {
+                position: relative;
+                top: 27px;
+                left: 0px;
+                font-weight: 500;
+                font-size: 22px;
+             }
+
+             .some-text-image{
+                position: relative;
+                right: 0;
+                top: 64px;
+                left: 0px;
+                width: 216px;
+             }
+         }
+     }
+
+     .start-learning-section{
+        margin-top : 80px;
+
+        h1{
+            text-align: center;
+            color: black;
+        }
+
+        .our-bottom-some-links{
+            text-align : center;
+            margin : 10px 0px;
+            margin-top : 24px;
+
+            .our-live-buttons{
+                margin : 0px 60px;
+                padding: 10px 22px;
+                font-weight: 500;
+                color: white;
+                border-radius: 4px;
+                background: #F19D26;
+            }
+        }
+     }
+
+}
+
+
+
+@media (max-width: 991.98px) { 
+
+    .main-page{
+        .phone-no-section{
+            width : 100%;
+            margin-bottom  : 30px;
+        }
+
+        .or-h3{
+            margin : 0 8px;
+        }
+
+        .Intro-section{
+            height: 50% !important;
+            width: 100% !important;
+        }
+
+        .our-live-buttons{
+            margin : 0px 0px !important;
+        }
+
+
+    }
+    
+ }

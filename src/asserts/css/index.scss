@@ -1,0 +1,103 @@
+body{
+    background: linear-gradient(180deg, #FAFF09 0%, rgba(255, 255, 255, 0) 100%), #FF9D1A;
+    margin : 0;
+    padding : 0;
+
+    .main-page-section {
+        margin-bottom : 30px;
+    }
+
+    .my-main-page-content{
+        padding : 0px 120px;
+    }
+    
+    .My-navbar{
+        background: #F8FD04;
+        padding : 10px 120px;
+        border-bottom :2px solid #FF6109;
+        margin-bottom  : 30px;
+
+        .navbar-nav {
+            .nav-link { 
+                margin-right: 9px;
+                border: 1px solid #F8FD04;
+                color: #5a5a5a;
+                font-weight: 600;
+                padding: 7px 14px;
+            }
+
+            .nav-link:hover { 
+                color: #5a5a5a;
+                border: 1px solid #7979796b;
+                padding: 7px 14px;
+                border-radius: 6px;
+            }
+
+            .navbar-username{
+                h4{
+                    font-size : 18px;
+                    color : blue;
+                    margin : 0px;
+                }
+            }
+
+            .navbar-usertype{
+                p{
+                    font-size: 12px;
+                    color: #545252;
+                    margin: 0px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        button{
+            background : blue;
+            font-weight : 500;
+            font-size : 16px;
+            border-radius : 4px;
+            color : white !important;
+        }
+
+        .navbar-brand{
+            i {
+              color : #fd6a6ae8;
+              font-size : 26px;
+              margin-right : 3px;
+            }
+
+            span{
+                font-weight : 600;
+                color : #fd6a6ae8;
+                font-size : 24px;
+            }
+        }
+    }
+
+    .select-class-section{
+        h1{
+            margin-left : 5px;
+            font-style: italic;
+            font-weight : 500;
+            font-size : 24px;
+        }
+
+        button {
+            margin: 2px 4px;
+            padding: 6px 24px;
+            background : yellow;
+        }
+    }
+}
+
+
+@media (max-width: 991.98px) { 
+
+    .my-main-page-content{
+        padding : 0px 36px !important;
+    }
+
+    .My-navbar{
+        padding : 10px 36px !important;
+    }
+ }
