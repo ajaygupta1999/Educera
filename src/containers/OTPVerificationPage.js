@@ -76,11 +76,8 @@ class Login extends Component {
                 </button>
                     {
                         this.state.isError &&
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <div class="alert alert-danger" role="alert">
                                 OTP do not match. please enter correct OTP.
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
                             </div>
                     }
                     <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -106,8 +103,6 @@ class Login extends Component {
                                <button type="submit" className="btn btn-md btn-warning btn-block" onClick={this.handleNext}>Verify and proceed</button>
                             </div>
                         </form>
-                         
-                        
                     </div>
             </div>
         </div> 
