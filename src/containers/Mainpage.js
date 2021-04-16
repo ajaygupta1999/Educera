@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import "../asserts/css/Mainpage.scss";
+import UserImage from "../Images/UserImage.jpg";
+import playstore from "../Images/Playstore.png";
+import applestore from "../Images/Applestore.png";
+import Learntocode from "../Images/Learntocode.png";
 
 
 class Mainpage extends Component{
@@ -46,7 +50,7 @@ class Mainpage extends Component{
                         <p className="find-your-tutor-text">Find Your Tutor Today! Download App Now</p>
                         <div className="download-images d-flex justify-content-start">
                             <div className="playstore-image d-flex align-items-center">
-                                <img className="playstore-image" src="/Images/playstore.png" />
+                                <img className="playstore-image" src={playstore} />
                             </div>
                             <div className="Applestore-image d-flex align-items-center">
                                 <img className="applestore-image" src="/Images/Applestore.png" />
