@@ -85,11 +85,11 @@ class UserDetails extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <input type="text" className="form-control" id="firstname" placeholder="Enter your first Name" name="firstname" 
+                                <input type="text" className="form-control" id="firstname" placeholder="Enter your Firstname" name="firstname" 
                                   onChange={this.handleChange} value={this.state.firstname} required/>
                             </div>
                             <div className="form-group col-md-6">
-                                <input type="text" className="form-control" id="lastname" placeholder="Enter your last name" name="lastname" 
+                                <input type="text" className="form-control" id="lastname" placeholder="Enter your Lastname" name="lastname" 
                                   onChange={this.handleChange} value={this.state.lastname} required/>
                             </div>
                         </div>
@@ -113,7 +113,7 @@ class UserDetails extends Component {
                         </div>
                         <div className="form-row">
                             <div className="form-group">
-                                <input type="text" name="address" className="form-control" id="inputAddress1" placeholder="Enter Address 1" 
+                                <input type="text" name="address" className="form-control" id="inputAddress1" placeholder="Enter Address" 
                                 onChange={this.handleChange} value={this.state.address} required/> 
                             </div>
                         </div>

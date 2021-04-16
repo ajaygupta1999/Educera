@@ -2,13 +2,137 @@ import React, { Component } from 'react';
 import "../asserts/css/Model.scss";
 import "../asserts/css/Login.scss";
 
+var SCOPE = 'https://www.googleapis.com/auth/spreadsheets';
+var discoveryUrl = 'https://sheets.googleapis.com/$discovery/rest?version=v4';
+
 class Login extends Component {
  
     constructor(props){
         super(props)
         this.state = {
             Nocode : "+91",
-            Mobno : ""
+            Mobno : "",
+            authRelatedData : {
+                name: '',
+                email: '',
+                accesstoken : "",
+                googleAuth: '',
+                imgurl : "",
+            }
+        }
+    }
+
+    componentWillMount = async () => {
+        try{
+            var script = document.createElement('script');
+            script.onload=this.handleClientLoad;
+            script.src="https://apis.google.com/js/api.js";
+            document.body.appendChild(script);
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+    handleClientLoad = () => {
+        window.gapi.load('client:auth2', this.initClient);
+    }
+
+    initClient = () => {
+        try{
+            window.gapi.client.init({
+              'apiKey': "AIzaSyCP6sQLJxUYuZhFwMctY1bug0-CkgRBcTo",
+              'clientId': "755925335295-qmcfaigpmp9ch2hno1g5qpb3n5ifm6jh.apps.googleusercontent.com",
+              'scope': SCOPE,
+              'discoveryDocs': [discoveryUrl]
+            }).then(() => {
+              this.setState({
+                ...this.state,
+                authRelatedData : {
+                  ...this.state.authRelatedData,
+                  googleAuth: window.gapi.auth2.getAuthInstance()
+                }
+              });
+
+              this.state.authRelatedData.googleAuth.isSignedIn.listen(this.updateSigninStatus);
+              if(!this.state.authRelatedData.googleAuth.isSignedIn.get()) {
+                  console.log("Please login first");
+                  document.getElementById('sign').addEventListener('click', this.signInFunction);
+              }else{
+                  var user = this.state.authRelatedData.googleAuth.currentUser.get();
+                  var accesstoken = this.state.authRelatedData.googleAuth.currentUser.get().getAuthResponse().access_token;
+                  let username = user.getBasicProfile().getName();
+                  let email = user.getBasicProfile().getEmail();
+                  let imgurl = user.getBasicProfile().getImageUrl();
+                  this.setState({
+                      ...this.state,
+                      authRelatedData : {
+                        ...this.state.authRelatedData,
+                        name: username,
+                        accesstoken : accesstoken,
+                        email : email,
+                        imgurl
+                      }
+                  });
+              }
+              // document.getElementById('sign').addEventListener('click', this.signInFunction);
+              // document.getElementById('signout-btn').addEventListener('click', this.signOutFunction);
+          });
+        }catch(e){
+          console.log(e);
+        }
+    }
+
+
+
+    signInFunction = async () => {
+        await this.state.authRelatedData.googleAuth.signIn();
+        await this.updateSigninStatus();
+    }
+
+    signOutFunction = async () => {
+        await this.state.authRelatedData.googleAuth.signOut();
+        await this.updateSigninStatus();
+    }
+
+    updateSigninStatus = async () => {
+        if(!this.state.authRelatedData.googleAuth.isSignedIn.get()) {
+            console.log("Please login first");
+            this.setState({
+              ...this.state,
+              authRelatedData : {
+                 ...this.state.authRelatedData,
+                 name: "",
+                 email: "",
+                 accesstoken : "",
+              }
+            });
+        }else{
+          var user = this.state.authRelatedData.googleAuth.currentUser.get();
+          var accesstoken = this.state.authRelatedData.googleAuth.currentUser.get().getAuthResponse().access_token;
+          let username = user.getBasicProfile().getName();
+          let email = user.getBasicProfile().getEmail();
+          let imgurl = user.getBasicProfile().getImageUrl();
+          
+          this.setState({
+            ...this.state,
+            authRelatedData : {
+              ...this.state.authRelatedData,
+              name: username,
+              accesstoken : accesstoken,
+              email : email,
+              imgurl
+            }
+          });
+
+          let dataobj = {
+            name: username,
+            accesstoken : accesstoken,
+            email : email,
+            imgurl : imgurl
+          }
+
+          this.props.handleGoogleLogin(dataobj);
+
         }
     }
 
@@ -33,6 +157,8 @@ class Login extends Component {
     handleNext = () => {
         this.props.handleLoginNext();
     }
+
+
 
     render(){
         return(        
@@ -61,9 +187,8 @@ class Login extends Component {
                                  <button className="btn btn-md btn-warning">Next</button>
                              </form>
                         </div>
-                         
                          <h3>Or</h3>
-                         <button className="btn btn-md btn-warning">Continue With Google</button>
+                         <button className="btn btn-md btn-primary blue-button" id="sign" onClick={this.signInFunction}><i class="fab fa-google"></i> SignIn With Google </button>
                     </div>
             </div>
         </div> 

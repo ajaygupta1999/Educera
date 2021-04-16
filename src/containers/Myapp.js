@@ -20,6 +20,12 @@ class Myapp extends Component {
             isOTPActive : false,
             Mobno : "",
             OTP: "",
+            googleLogin : {
+                name: '',
+                email: '',
+                accesstoken : "",
+                imgurl : "",
+            },
             selectedStd  : "",
             userDetails : {
                 firstname : "",
@@ -140,16 +146,29 @@ class Myapp extends Component {
         });
     }
 
+    handleGoogleLogin = (data) => {
+        this.setState({
+            ...this.state,
+            isLoginActive : false,
+            googleLogin : {
+                name: data.name,
+                email: data.email,
+                accesstoken : data.accesstoken,
+                imgurl : data.imgurl
+            }
+        });
+    }
+
 
     render(){
         return(
             <div className="main-page-section">
-                <Navbar toggleLogin={this.toggleLogin} userDetails={this.state.userDetails} />
+                <Navbar toggleLogin={this.toggleLogin} userDetails={this.state.userDetails} googleLogin={this.state.googleLogin} />
                 <div className="my-main-page-content">
                     <Mainpage />
                     {
                         this.state.isLoginActive && 
-                        <Login toggleLogin={this.toggleLogin} handleLoginNext={this.handleLoginNext} AddMobNo={this.AddMobileNo}/>
+                        <Login handleGoogleLogin={this.handleGoogleLogin} toggleLogin={this.toggleLogin} handleLoginNext={this.handleLoginNext} AddMobNo={this.AddMobileNo}/>
                     }
                     {
                         this.state.isOTPActive && 
