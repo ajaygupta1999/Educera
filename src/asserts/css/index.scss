@@ -5,13 +5,15 @@ body{
 
     .my-main-page-content{
         padding : 0px 120px;
+        transition : all 0.3s ease;
     }
     
     .My-navbar{
         background: #F8FD04;
-        padding : 10px 120px;
+        padding: 10px 8%;
         border-bottom :2px solid #FF6109;
-        margin-bottom  : 30px;
+        margin-bottom  : 15px;
+        transition : all 0.3s ease;
 
         .navbar-nav {
             .nav-link { 
@@ -48,11 +50,19 @@ body{
         }
 
         button{
-            background : blue;
+            background-color: #fc6200;
             font-weight : 500;
             font-size : 16px;
             border-radius : 4px;
             color : white !important;
+        }
+
+        button:hover { 
+            background-color: #fc6200;
+        }
+
+        button:focus {
+            outline : none;
         }
 
         .navbar-brand{
@@ -73,7 +83,8 @@ body{
     .start-learning-section{
         background : white;
         padding-top: 36px;
-        padding-bottom : 20px;
+        padding-bottom : 20px; 
+        transition: all 0.3s ease;
 
         h1{
             text-align: center;
@@ -86,7 +97,8 @@ body{
             margin-top : 24px;
 
             .our-live-buttons{
-                margin : 0px 60px;
+                width : 156px;
+                margin: 10px 5%;
                 padding: 10px 22px;
                 font-weight: 500;
                 color: white;
@@ -113,16 +125,18 @@ body{
 
     #myTab {
         background: white;
+        border : 0px;
 
         .nav-item {
             a{
-                background-color: #f5f5f5d1;
+                background-color: #f5f5f5;
                 font-weight : 500;
                 color : black;
                 margin-right : 10px;
                 padding : 10px 26px;
                 border-top-left-radius: 4px;
                 border-top-right-radius: 4px;
+                box-shadow: inset 0px -9px 8px -9px #e8e8e8;;
             }
 
             .active{
@@ -130,7 +144,7 @@ body{
                 color : black;
                 background : white;
                 color: #ff6200;
-                box-shadow: rgba(0, 0, 0, 0.16) -1px -4px 6px, rgba(0, 0, 0, 0.23) 1px -3px 6px;
+                box-shadow: 0px -4px 5px 0px rgba(0, 0 , 0, 0.15);
             }
         }
     } 
@@ -138,6 +152,7 @@ body{
     .teacher-lecture-section{
         background: white;
         padding : 0px 120px;
+        transition: all 0.3s ease;
     }
 
     .education-standard-section{
@@ -161,9 +176,6 @@ body{
       padding : 0px 30px !important;
     }
 
-    .education-standard-section{
-        padding : 0;
-    }
     .our-demo-cards-section{
         width: 29rem !important;
         margin-left: 10px !important;
@@ -171,6 +183,7 @@ body{
 
     .education-standard-section{
         padding : 0px !important;
+        padding-top : 25px !important;
         padding-bottom : 30px !important;
     }
 
@@ -179,3 +192,14 @@ body{
     }
     
  }
+
+
+@media (max-width: 767.98px) { 
+
+    .our-live-buttons{
+       display: block;
+       margin : 10px auto !important;
+    }
+
+
+}

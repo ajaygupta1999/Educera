@@ -177,6 +177,12 @@ class Login extends Component {
                                             <option value="+91">+91</option>
                                             <option value="+92">+92</option>
                                             <option value="+93">+93</option>
+                                            <option value="+94">+94</option>
+                                            <option value="+95">+95</option>
+                                            <option value="+96">+96</option>
+                                            <option value="+97">+97</option>
+                                            <option value="+98">+98</option>
+                                            <option value="+99">+99</option>
                                         </select>
                                     </div>
                                     <div className="input-phone-number-section">
@@ -187,7 +193,7 @@ class Login extends Component {
                                  <button className="btn btn-md btn-warning">Next</button>
                              </form>
                         </div>
-                         <h3>Or</h3>
+                         <h3>OR</h3>
                          <button className="btn btn-md btn-primary blue-button" id="sign" onClick={this.signInFunction}><i class="fab fa-google"></i> SignIn With Google </button>
                     </div>
             </div>

@@ -28,7 +28,7 @@ class Mainpage extends Component{
                           </div>
                      </div>
                      <div className="col-md-4">
-                        <img style={{ height : "400px" }} src={Mobileapp}></img>
+                        <img src={Mobileapp}></img>
                      </div>
                  </div>
                 <div className="phone-no-section d-flex justify-content-between">
@@ -48,11 +48,11 @@ class Mainpage extends Component{
                 <div className="download-section row">
                     <div className="col-md-6">
                         <p className="find-your-tutor-text">Find Your Tutor Today! Download App Now</p>
-                        <div className="download-images d-flex justify-content-start">
-                            <div className="playstore-image d-flex align-items-center">
+                        <div className="download-images">
+                            <div className="playstore-image-section">
                                 <img className="playstore-image" src={playstore} />
                             </div>
-                            <div className="Applestore-image d-flex align-items-center">
+                            <div className="Applestore-image">
                                 <img className="applestore-image" src={applestore} />
                             </div>
                         </div>

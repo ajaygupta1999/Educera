@@ -2,12 +2,15 @@
 .main-page{
      .first-section {
         margin-bottom  : 60px;
+        transition: all 0.3s ease;
 
         .col-md-8 {
+            padding-top :20px;
+
              .Intro-section{
                 background-color: #ffffff;
                 height: 50%;
-                width: 65%;
+                margin: 0px 34% 0px 0px;
                 padding: 58px;
                 border-radius: 50%;
 
@@ -19,6 +22,7 @@
 
                 p{
                     text-align: center;
+                    transition: all 0.3s ease;
                 }
              }
 
@@ -38,11 +42,20 @@
                  }
              }
          }
+
+         .col-md-4{
+             padding-top : 20px; 
+
+             img{
+                height: 400px;
+             }
+         }
      }
 
      .phone-no-section{
          width : 60%;
          margin-bottom  : 30px;
+         transition : all 0.3 ease;
 
          .find-me-a-tutor-section {
              button {
@@ -54,7 +67,7 @@
              }
          }
         .search-tutor-section{
-            width : 400px;
+            width : 45%;
 
             input{
                 border-radius : 0px;
@@ -72,22 +85,34 @@
 
      .download-section {
 
-         .playstore-image {
-             width : 170px;
-             margin-right : 25px;
-         }
+        .playstore-image-section{
+            display: inline-block;
+            width : 35%;
+            margin-right : 5px;
 
-         .applestore-image{
-            width : 200px;
+            .playstore-image {
+                width : 86%;
+            }
+        }
+
+        .Applestore-image{
+            display: inline-block;
+            width : 35%;
             margin-right : 25px;
-         }
+
+            .applestore-image{
+                width : 100%;
+             }
+        }
+
+         
 
          .find-your-tutor-text , .get-link-to-download-text{
              font-size : 18px;
              font-weight : 500;
          }
          .get-link-section{
-             width : 80%;
+              max-width : 85%;
 
              .input-group-append{
                  span {
@@ -111,11 +136,11 @@
 
 
      .learn-to-code-section{
-         margin-top : 100px;
-         padding: 10px 50px;
+         margin-top : 60px;
+         padding: 10px 50px 30px;
 
          .keep-learning-text{
-            margin-top : 20px;
+            margin : 20px 0px;
          } 
 
          .images-sections-of-app {
@@ -163,12 +188,11 @@
 }
 
 
-
 @media (max-width: 991.98px) { 
 
     .main-page{
         .phone-no-section{
-            width : 100%;
+            width : 100% !important;
             margin-bottom  : 30px;
         }
 
@@ -182,10 +206,16 @@
         }
 
         .our-live-buttons{
-            margin : 0px 0px !important;
+            margin : 10px 0px !important;
         }
 
+        .col-md-4{
+            text-align: center; 
+        }
 
+        .learn-to-code-section{
+            margin-top : 50px;
+        }
     }
     
  }

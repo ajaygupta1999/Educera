@@ -14,6 +14,11 @@
                 border-bottom : 1px solid black;
                 margin-right : 20px;
             }
+
+            input:focus {
+                outline : none;
+                color: #000;
+            }
         }
 
         .Verify-page-section{
