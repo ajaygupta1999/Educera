@@ -37,13 +37,13 @@ class Navbar extends Component {
                                      (this.props.googleLogin.email.length > 0)  &&
                                       <li className="nav-item">
                                         <div className="user-details-after-login">
-                                            <div className="Username-and-image-section d-flex justify-content-center align-items-center">
+                                            <div className="Username-and-image-section d-flex justify-content-start align-items-center">
                                                 <div className="Userimage-section mr-2">
-                                                <img style={{ width :  "44px" , height : "44px", borderRadius : "22px", objectFit : "cover" }} src={this.props.googleLogin.imgurl} />
+                                                <img src={this.props.googleLogin.imgurl} />
                                                 </div>
                                                 <div className="username-and-email-section">
-                                                    <p style={{ margin : "0px", fontSize : "18px", fontWeight : "600" }}>{this.props.googleLogin.name}</p>
-                                                    <p style={{ margin : "0px", fontSize : "15px" }}>{this.props.googleLogin.email}</p>
+                                                    <p className="p1">{this.props.googleLogin.name}</p>
+                                                    <p className="p2">{this.props.googleLogin.email}</p>
         
                                                 </div>
                                             </div>
